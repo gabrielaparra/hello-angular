@@ -1,3 +1,22 @@
-<p>
-  pipes works!
-</p>
+<br>
+<section>
+  <h3> Pipes Component </h3>
+  <input type="text" [(ngModel)]="randomText" placeholder="Blah blah blah">
+
+  <p>
+    Right now it's
+    {{ rightNow | date:'h:mm a on EEEE, MMMM d, y' }}
+  </p>
+  <button (click)="addOneHour()"> Add an hour </button>
+
+  <p>
+    Current Investment:
+    {{ currentInvestment | currency:'EUR':true }}
+  <!-- adding ':true' turns the currency letters into its symbol -->
+  </p>
+
+  <p> {{ randomText | uppercase }} </p>
+  <p> {{ randomText | lowercase }} </p>
+
+</section>
+<br>

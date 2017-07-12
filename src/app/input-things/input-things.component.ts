@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class InputThingsComponent implements OnInit {
   message: string = 'Select a lunch option';
   lunchSelection: string;
+  theProduct: object = {};
 
   constructor() { }
 
@@ -23,7 +24,7 @@ export class InputThingsComponent implements OnInit {
   }
 
   createProduct() {
-    console.log('Product Created.')
+    console.log('Product Created.');
   }
 
 }
