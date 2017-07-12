@@ -25,4 +25,22 @@
     <option value="lasagna"> Lasagna </option>
     <option value="arepa"> Arepa </option>
   </select>
+
+  <div>
+    <h3> What product do you need right now? </h3>
+
+    <label for="product-name"> Name </label>
+    <input id="product-name" type="text"
+           [(ngModel)]="theProduct.title">
+    <br>
+    <label for="product-price"> Price </label>
+    <input id="product-price" type="number" step="0.10"
+           [(ngModel)]="theProduct.price">
+    <br>
+    <label for="product-description"> Description </label>
+    <textarea id="product-description"
+              [(ngModel)]="theProduct.description"></textarea>
+    <br>
+    <button (click)='createProduct()'> Submit </button>
+  </div>
 </section>

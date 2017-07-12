@@ -22,4 +22,8 @@ export class InputThingsComponent implements OnInit {
     }
   }
 
+  createProduct() {
+    console.log('Product Created.')
+  }
+
 }
