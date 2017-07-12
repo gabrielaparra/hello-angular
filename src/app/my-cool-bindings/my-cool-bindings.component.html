@@ -1,0 +1,14 @@
+<section>
+  <h3> {{ feedbackMessage }} </h3>
+  <img [src]="imageUrl" (click)='changetheImage()'>
+
+  <p *ngIf='clickCount > 0'>
+    You have clicked {{ clickCount }} times.
+  </p>
+
+  <button (click)="updateMessage()"> Click Me </button>
+
+  <input type="text" [disabled]="isInputDisabled">
+              <!-- A disabled input element is unusable and un-clickable. -->
+  <button (click)="toggleThatInput()"> {{ buttonText }} </button>
+</section>
