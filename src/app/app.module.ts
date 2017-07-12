@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+//TO USE NG OPTIONS IN FORMS
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,7 +18,9 @@ import { InputThingsComponent } from './input-things/input-things.component';
     InputThingsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
+    //TO USE NG OPTIONS IN FORMS
   ],
   providers: [],
   bootstrap: [AppComponent]

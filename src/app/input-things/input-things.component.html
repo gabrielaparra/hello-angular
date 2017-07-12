@@ -1,3 +1,28 @@
 <section>
   <h3> Inputs in Angular </h3>
+
+  <label for="username-input"> What's your name? </label>
+  <input id="username-input" type="text" placeholder="Dr. Seuss"
+         [(ngModel)]="username">
+  <!-- store username in the 'username' variable -->
+  <br>
+  <h3 *ngIf="username">
+    Hello, {{ username }}
+  </h3>
+
+  <p> {{ message }} </p>
+
+  <!-- store user's choice in the 'lunchSelection' variable -->
+  <!-- this won't work unless Forms Module is imported inside app.module.ts -->
+  <!--        |                                             -->
+  <!--        |                                             -->
+  <select [(ngModel)]='lunchSelection'
+          (change)='reactToSelection()'>
+    <option value=""> Click to see options </option>
+    <option value="taco-bell"> Taco Bell </option>
+    <option value="ceviche"> Ceviche</option>
+    <option value="sushi"> Sushi </option>
+    <option value="lasagna"> Lasagna </option>
+    <option value="arepa"> Arepa </option>
+  </select>
 </section>
