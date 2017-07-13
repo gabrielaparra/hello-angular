@@ -9,6 +9,8 @@ import { FooterComponent } from './footer/footer.component';
 import { MyCoolBindingsComponent } from './my-cool-bindings/my-cool-bindings.component';
 import { InputThingsComponent } from './input-things/input-things.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { CapitalizePipe } from './my-pipes/capitalize.pipe';
+import { EmojifyPipe } from './my-pipes/emojify.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { PipesComponent } from './pipes/pipes.component';
     FooterComponent,
     MyCoolBindingsComponent,
     InputThingsComponent,
-    PipesComponent
+    PipesComponent,
+    CapitalizePipe,
+    EmojifyPipe
   ],
   imports: [
     BrowserModule,
