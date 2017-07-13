@@ -1,6 +1,26 @@
 <br>
 <section>
   <h3> Directives Examples </h3>
+
+  <button (click)="buttonA()">
+    Toggle Size
+  </button>
+  <button (click)="buttonB()">
+    Toggle Color
+  </button>
+  <button (click)="buttonC()">
+    Toggle Font
+  </button>
+  <!-- these are buttons that affect the appearance of the following div -->
+
+
+        <!-- 'big' is the class name
+                      |  'isBigSize' is the variable name
+                      |      |          -->
+  <div [ngClass]="{ big: isBigSize, colorful: hasColor, comic: isComic }">
+    <p>Lorem ipsum dolor sit amet.</p>
+  </div>
+
   <select [(ngModel)]="dropddownSelection">
     <option value="">Choose your Pizza</option>
     <option value="nyc">New York Style</option>
