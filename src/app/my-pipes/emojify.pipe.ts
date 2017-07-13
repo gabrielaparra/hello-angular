@@ -9,11 +9,12 @@ export class EmojifyPipe implements PipeTransform {
     if (typeof value !== 'string') {
       return "";
     } else {
-      return value.replace(/pizza/i, '🍕')
+      return value.replace(/pizza/ig, '🍕')
       // /word/i ==> case insensitive
-      .replace(/fencing/i, '🤺')
-      .replace(/avocado/i, '🥑')
-      .replace(/wine/i, '🍷');
+      // /word/ig ==> (g)lobal match (check the whole string)
+                  .replace(/fencing/ig, '🤺')
+                  .replace(/avocado/ig, '🥑')
+                  .replace(/wine/ig, '🍷');
     }
   }
 

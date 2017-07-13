@@ -15,6 +15,16 @@
   <!-- adding ':true' turns the currency letters into its symbol -->
   </p>
 
+  <label for="rock-search">Search for your favorite The Rock</label>
+  <input id="rock-search" type="search" placeholder="Fast and Furious"
+         [(ngModel)]="rockSearchText">
+  <ul>
+    <li *ngFor="let rock of (theRockArray | doTheSearch:rockSearchText)">
+      <h4> {{ rock.name }} </h4>
+      <img [src]="rock.pictureUrl">
+    </li>
+  </ul>
+
   <p> {{ randomText | uppercase }} </p>
   <p> {{ randomText | lowercase }} </p>
   <p> {{ randomText | capitalize }} </p>

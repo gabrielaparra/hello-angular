@@ -1,0 +1,26 @@
+<br>
+<section>
+  <h3> Directives Examples </h3>
+  <select [(ngModel)]="dropddownSelection">
+    <option value="">Choose your Pizza</option>
+    <option value="nyc">New York Style</option>
+    <option value="deep">Chicago Deep Dish</option>
+    <option value="thin">Thin Crust</option>
+    <option value="wood">Wood Oven</option>
+  </select>
+
+  <div [ngSwitch]="dropddownSelection">
+    <div *ngSwitchCase="'nyc'">
+               <!-- strings go quotes in quotes -->
+      <img src="https://media.giphy.com/media/np7SE8tcAmL3W/giphy.gif">
+    </div>
+
+    <div *ngSwitchCase="'deep'">
+      <img src="https://media.giphy.com/media/YFSMDywAAGQIo/giphy.gif">
+    </div>
+
+    <div *ngSwitchDefault>
+      <h4> Cool, I guess. </h4>
+    </div>
+  </div>
+</section>
