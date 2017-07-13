@@ -10,11 +10,22 @@ export class DirectivesExampleComponent implements OnInit {
   hasColor: boolean = false;
   isComic: boolean = true;
 
-  dropddownSelection: string = "";
+  headingColor: string = '';
+
+  dropddownSelection: string = '';
 
   constructor() { }
 
+  // ngOnInit() will be called as soon as the component is loaded
   ngOnInit() {
+    setInterval(() => {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      const randomRGB = `rgb(${r}, ${g}, ${b})`;
+
+      this.headingColor = randomRGB
+    }, 5000);
   }
 
   buttonA() {
